@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Box from "./Box";
 import { meme } from "./data";
 
-const Form = () => {
+const Form = ({selectedColor}) => {
   const [topText, setTopText] = useState("");
   const [bottomText, setBottomText] = useState("");
   const [image, setImage] = useState("/trolling-face.png");
@@ -63,7 +63,7 @@ const Form = () => {
           Generate new meme image
         </button>
       </form>
-      <Box topText={topText} bottomText={bottomText} image={image} />
+      <Box topText={ topText } bottomText={ bottomText } image={ image } selectedColor={selectedColor } />
     </>
   );
 };

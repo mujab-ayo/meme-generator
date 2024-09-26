@@ -1,12 +1,20 @@
 import React from "react";
 
-const Box = ({ topText, bottomText, image }) => {
+const Box = ({ topText, bottomText, image, selectedColor }) => {
   {console.log(image)}
   return (
     <div className="relative p-10 w-full h-full rounded-md">
       <div className="p-6 flex flex-col items-center  h-full">
-        <span className=" text-6xl mb-auto text-mid font-bold">{topText}</span>
-        <span className=" text-6xl mt-auto text-mid font-bold">
+        <span
+          className=" text-6xl mb-auto text-mid font-bold"
+          style={{ color: selectedColor }}
+        >
+          {topText}
+        </span>
+        <span
+          className=" text-6xl mt-auto text-mid font-bold"
+          style={{ color: selectedColor }}
+        >
           {bottomText}
         </span>
       </div>
